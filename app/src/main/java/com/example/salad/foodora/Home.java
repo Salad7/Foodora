@@ -18,10 +18,6 @@ public class Home extends AppCompatActivity {
 
 
 
-    View rootLayout;
-    ClipRevealFrame menuLayout;
-    ArcLayout arcLayout;
-    View centerItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +30,10 @@ public class Home extends AppCompatActivity {
         //menuLayout = (ClipRevealFrame) findViewById(R.id.menu_layout);
         //arcLayout = (ArcLayout) findViewById(R.id.arc_layout);
 
+        Button mCreate = (Button) findViewById(R.id.button_create);
         Button mLocal = (Button) findViewById(R.id.button_local);
-        mLocal.setOnClickListener(new View.OnClickListener() {
+
+        mCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -44,7 +42,15 @@ public class Home extends AppCompatActivity {
                 startActivity(barbie);
             }
         });
-    }
+
+    mLocal.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent barbie = new Intent(getApplicationContext(),Local.class);
+            startActivity(barbie);
+        }
+    });
+}
 
 
 
