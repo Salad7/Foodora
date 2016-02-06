@@ -4,4 +4,6 @@
     <string name="note_advanced_tumblr">Tumblr Style</string>
     <item name="arc_layout" type="id"/>
     <item name="note_text" type="id"/>
+    <string name="account">Account</string>
+    <string name="local">Local</string>
 </resources>

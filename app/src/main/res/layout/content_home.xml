@@ -28,7 +28,8 @@
         android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp" />
+        android:layout_marginTop="66dp"
+        android:id="@+id/textView2" />
 
     <com.example.salad.foodora.widget.ClipRevealFrame
         android:id="@+id/menu_layout"
@@ -47,6 +48,7 @@
             app:arc_origin="center"
             app:arc_radius="@dimen/layout_radius_tumblr"
             >
+
 
             <Button
                 style="@style/Item.Tumblr"
@@ -74,8 +76,9 @@
 
             <Button
             style="@style/Item.Tumblr"
+            android:id="@+id/button_local"
             android:background="@drawable/tumblr_blue_oval"
-            android:text="E"
+            android:text="L"
             />
 
             <!--</com.example.salad.library.ArcLayout>-->
@@ -102,5 +105,29 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account"
+        android:textSize="11dp"
+        android:typeface="monospace"
+        android:id="@+id/text_account"
+        android:layout_marginBottom="107dp"
+        android:layout_above="@+id/fab"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Local"
+        android:textSize="11dp"
+        android:typeface="monospace"
+        android:id="@+id/textView"
+        android:layout_marginBottom="84dp"
+        android:layout_above="@+id/text_account"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
