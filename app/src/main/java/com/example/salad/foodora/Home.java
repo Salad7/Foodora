@@ -13,6 +13,8 @@ import android.widget.Button;
 
 import com.example.salad.foodora.widget.ClipRevealFrame;
 import com.ogaclejapan.arclayout.ArcLayout;
+import com.parse.Parse;
+import com.parse.ParseInstallation;
 
 public class Home extends AppCompatActivity {
 
@@ -50,7 +52,12 @@ public class Home extends AppCompatActivity {
             startActivity(barbie);
         }
     });
+
 }
+    public void onCreate() {
+        Parse.initialize(this);
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+    }
 
 
 
